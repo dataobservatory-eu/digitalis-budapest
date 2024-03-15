@@ -1,0 +1,138 @@
+---
+title: "Smart Cities and Digital Twins"
+subtitle: "List of references and some quotes"
+author:
+  - name: "Daniel Antal, CFA"
+    orcid: 0000-0001-7513-6760
+    url: https://reprex.nl/author/daniel-antal/
+    affiliations:
+      - name: Reprex
+        address: "Saturnusstraat 14"
+        city: The Hague
+        state: Zuid-Holland
+        country: The Netherlands
+        postal-code: "2516 AH"
+        url: https://reprex.nl/
+      - name: OpenCollections
+        url: https://opencollections.net/
+editor: visual
+papersize: A4
+format:
+  html: 
+    toc: true
+    toc-depth: 3
+  pdf:
+    toc: true
+    colorlinks: true
+    latex: 
+       - lof: true
+  docx: default
+  gfm: 
+     toc-depth: 2
+bibliography:
+  - bib/digitaltwin.bib
+  - bib/ISOdata.bib
+  - bib/smartcities.bib
+  - bib/datalinking.bib
+  - bib/dataspace.bib
+  - bib/libraryLOD.bib
+  - bib/archivesLOD.bib
+---
+
+## Digital Twins: A Reader
+
+The concept of the digital twin was first introduced in 2002 by Michael Grieves in a presentation slide about a “Conceptual Ideal for PLM" \[product life cycle management\]. The term was coined in 2011 as a metaphor for the original "Information Mirroring Model". After a long evolution, in 2017, Grieves and Vickers have introduced a formal definition of digital twins in the context of systems engineering.
+
+> Digital Twin (DT)—the Digital Twin is a set of virtual information constructs that fully describes a potential or actual physical manufactured product from the micro atomic level to the macro geometrical level. At its optimum, any information that could be obtained from inspecting a physical manufactured product can be obtained from its Digital Twin. </br> Digital Twins are of two types: Digital Twin Prototype (DTP) and Digital Twin Instance (DTI). DT’s are operated on in a Digital Twin Environment (DTE). Digital Twin Prototype (DTP)—this type of Digital Twin describes the prototypical physical artifact. It contains the informational sets necessary to describe and produce a physical version that duplicates or twins the virtual version. These informational sets include, but are not limited to, Requirements, Fully annotated 3D model, Bill of Materials (with material specifications), Bill of Processes, Bill of Services, and Bill of Disposal. </br> Digital Twin Instance (DTI)—this type of Digital Twin describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product [@grieves_vickers_digital_twin_2017, p94].
+
+Grieve's concern was to create a virtual mirror of a system (a complex product or a building or other system) that can be used for prototyping, replacing economically and environmentally costly phsyical prototyping, and later, it can accompany the physical system (aircraft, building) until decommissioning or disposal for inexpensive interogation via the physical system's sensors.
+
+According to Grieve's abstract "Systems do not simply pop into existence. They progress through lifecycle phases of creation, production, operations, and disposal. The issues leading to undesirable and unpredicted emergent behavior are set in place during the phases of creation and production and realized during the operational phase, with many of those problematic issues due to human interaction. We propose that the idea of the Digital Twin, which links the physical system with its virtual equivalent can mitigate these problematic issues."
+
+> Up until fairly recently, the only way to have extensive knowledge of the physical object was to be in close proximity to that object. The information about any physical object was relatively inseparable from the physical object itself. We could have superficial descriptions of that object, but at best they were limited in both extensiveness and fidelity. </br> Such basic information as dimensions height, width, and length, only became available in the mid-1800s with the creation of the standard inch and a way to consistently measure that inch. Prior to that period of time, everyone had his or her own version of measurement definitions that meant that interchangeable manufacturing was impossible.</br> It was then only in the last half of the twentieth century, that we could strip the information from a physical object and create what we are calling a Digital Twin. This Digital Twin started off relatively sparse as a CAD description and is becoming more and more rich and robust over the years. While at first, this Digital Twin was merely descriptive, in recent years it is becoming actionable.</br> What actionable means is that the CAD object is no longer simply a three dimensional object hanging in empty space, time independent. We can now simulate physical forces on this object over time in order to determine its behavior. Where CAD models were static representations of form, simulations are dynamic representations, not only of form but also of behavior. [@grieves_vickers_digital_twin_2017 p85]
+
+As it happens with all strong conceptual ideas and metaphors, people started to use the `digital twin` concept in various contexts and scenarios that go beyond Grieve's own definition. For Reprex, a somewhat relaxed definition is more workable, but Grieve's eloquent book chapter is the best introduction to the idea.
+
+> Since its inception, however, the concept has broadened and loosened somewhat in that it is now being applied, or rather used, to characterize a variety of digital simulation models that run alongside real-time processes that pertain to social and economic systems as well as physical systems. [@batty_digital_twins_2018, p817]
+
+## Beyond product lifecylce management and architecture
+
+> More recently, digital twin has attracted a great deal of attention and has been widely explored in aviation, healthcare, smart cities, intelligent transportation, urban intelligence, and future wireless communications. The digital twin fulfils the role of collecting the real-time and historical running status of physical objects and making corresponding predictions and optimized decisions to improve the running performance of physical systems. [@zhang_digital_twin_introduction_2024, p2]
+
+Creating a strict digital twin for the entire lifecycle of an aircraft or a building is a complex enough task, and only the world's largest corporations are near the idea of such a twin. Because of the potential cost savings and sustainability benefits associated with planning/design, building, maintenance, risk management, and asset-life prolongation/decommissioning decisions, the idea of digital twins has been applied to far more complex systems, such as transport systems, cities, or healthcare, where the "twin" in digital space is a thoroughly simplified model of the physical objects (including living beings.)
+
+Recent studies have provided a series of definitions for digital twin. Zhang categorizes the definitions into three types [@zhang_digital_twin_introduction_2024, p3]:
+
+-   [x] virtual mirror model–based definitions: "a digital twin is defined as the virtual representation of a physical product, process, or system … in this definition, the interaction between physical objects and digital space is neglected. The status change of physical objects can hardly be reflected by the digital model after its creation"
+-   [x] computerized model–based definitions: "digital twins are treated as computerized models, which can be simulation processes or a series of software. The performance of physical objects can be improved through prediction, real-time control, and optimization."
+-   [x] and integrated system–based definitions. In the integrated system–based definitions, digital twins are regarded as an integration of physical objects, virtual twins, and related data (See: [@liu_et_al_data_fusion_2018])
+
+## Connecting Digital Twins to Smart Cities
+
+The idea of creating a digital twin city is both lucrative and utopian. Perfect twins of complex physical systems are rare, and cities are extremely complex. Yet the insight to be gained from imperfect, simpler twins that monitor only certain aspects of the physical object is extremely valuable.
+
+*Urban Digital Twins for Smart Cities and Citizens: The Case Study of Herrenberg, Germany* is a mixed empirical and computational research and innovation project where a small city's urban digital twin was prototyped and visualized in virtual reality for participative and collaborative planning and design processes. The town of Herrenberg, with 30,000 inhabitants, is located in Baden-Württemberg in the southwest of Germany, and it is a part of the Stuttgart metropolitan region, with around 5.2 million inhabitants. The novelty of this project is the inclusion of social data and citizen scientists in the modelling, which is particularly interesting for Reprex. As Grieves & Vickers [@grieves_vickers_digital_twin_2017] note, most systems are by nature socio-technological systems, and most catastrophic system failures can usually be traced back to unexpected human behaviour in a nuclear power plant, on two colliding aircraft or other complex systems. [@dembski_urban_digital_twins_2020]
+
+> An urban digital twin is not the exact copy of reality, but a sophisticated abstraction of ibidem. This results from a classical dilemma in the field of modeling, as models always have a certain level of abstraction. An urban digital twin can be best characterized as a container for models, data, and simulations. Beyond these challenges, it has great potential to support scenario development processes and testing of these at all scales. [@dembski_urban_digital_twins_2020, p2]
+
+The idea of using digital twins for urban planning, or interrogating digital twins for the better management of cities, for example, the traffic in the city, is often associated with the term "smart city".
+
+> Even though the concept itself is not entirely new for public administration, the beginning of the term dates back to the 1990s and is associated with the concept of smart growth; in fact, there is no generally accepted definition of smart cities that would correspond to the smart cities concept on a global level . \[…\] Smart cities are opening the way for the collection of so-called "big data", i.e., simply, cheaply, and efficiently created databases or sensor networks (internet of things, IoT), which collects information from various sources to test and create sophisticated simulations on urban processes and also behavioral aspects of their citizens. [@dembski_urban_digital_twins_2020, p3]
+
+> Embedding the urban digital twin in the smart city transformation debate, it is not surprising that only a few have been singularly successful. Smart city projects demand two crucial competencies: an understanding of the impact of implementing digital technologies in the context of urban systems, and integrating solutions that overcome departmental thinking. If these competencies are not taken into account, the great potential of digital technologies and solutions remains unused. [@dembski_urban_digital_twins_2020, p15]
+
+## Connecting Digital Twins to Data Spaces
+
+> An ‘Urban’ Digital Twin is a version where the physical entity is a city and is used to support decisions that pertain to this city. Various local administrations (e.g., in Amsterdam, Rotterdam, Santander, Helsinki, Antwerp, Vienna, Athens, Pilsen, Flanders and Bruges) are investigating how such a virtual replica of a physical city can improve the decision-making process. Local Digital Twins, as shown in figure 1, are ‘fed’ by Local Data Space data. Indeed, they are one of the applications that most need the cross-domain data sharing which the Local Data Spaces allows. For more on Local Digital Twins, we refer the reader to the Local Digital Twin white paper published by Imec’s digital transformation department[^1]. [@gaia-x_smart_cities_2021, p3]
+
+[^1]: In our understanding, contemplating an urban digital twin requires a very high level of digital system interoperability and data portability. The evolving institution of the data (sharing) space aims to create the necessarily high level of interoperability and portability to make digital twins computationally feasible.
+
+![The general conceptual model of the European Interoperability Framework](png/interoperability/eif_conceptual_model_p46.png){fig-align="center"}
+
+`interoperability`: Ability of two or more systems or applications to exchange information and to mutually use the information that has been exchanged. \[ISO/IEC 19941:2017\] [@iso_19941_2017]
+
+`data portability`: Ability to easily transfer data from one system to another without being required to re-enter data. \[ISO/IEC 19941:2017\] [@iso_19941_2017]
+
+The critical importance of interoperability was recognised in the urban context: in 2022, the European Commission developed a European Interoperability Framework for Smart Cities and Communities (EIF4SCC) as a specialisation of the European Interoperability Framework.
+
+`smart city/community`: A sustainable and inclusive city/community aiming at the well-being of their inhabitants, businesses, visitors, organisations and city/community administrators by offering digitally-enabled services. \[, p8\]
+
+`data space`: Reprex as an associated member uses the current definition of BVDA, i.e.: A Data Space is a “public collection of findable, accessible, interoperable and reusable (FAIR), quality data and related resources consumed, produced and provided by identified participants, each respecting societal values and operating within an explicit framework of trust and governance [@bdva_data_sharing_spaces_interoperability_2023, p19.]”
+
+The European Interoperability Framework for Smart Cities and Communities (EIF4SCC) recommendation #7 explicitly endorses the uses of data spaces:
+
+> Make sources of information (base registries, open data portals, etc.) available to inhabitants, business, visitors, organisations and city/community administrators ensuring security, trust and privacy in accordance with the relevant legislation and contribute to the EU data space for climate neutral and smart communities. [@eif4scc_2022, p11]
+
+## Sustainability
+
+In the European policy context, smart cities are support in the context of sustainability, whihc is one of the most important raison d'être for the digital twin concept, too.
+
+In a somewhat critical special report *Smart cities – Tangible solutions, but fragmentation challenges their wider adoption*, the European Court of Auditors cites many shortcomings of the EU's Lighthouse initiative in this area. One aspect of the lack of breakthrough is that few projects received any substantial private investment. [@european_court_of_auditors_smart_cities_2023]
+
+> The EU is highly urbanised, with nearly 75 % of its citizens living in cities and towns and 80 % expected to do so by 2050. Cities and metropolitan areas, as well as being central economic players, are also major sources of greenhouse gases, air, water, and soil pollution. Using technology to improve how cities are managed, can help achieve three of the EU's priorities: the Green Deal, a focus on digital technology, and an economy that benefits people. </br> In a smart city, sustainable urban development is achieved through “new, efficient, and user-friendly technologies and services, in particular in areas of energy, transport, and ICT”. As well as using technology to save resources and reduce pollution, a smart city also aims to make city services more responsive and accessible, make public spaces safer, and improve transportation, water and waste management, street lighting, and heating in buildings. [@european_court_of_auditors_smart_cities_2023, p6]
+
+in some capacity in a EU-funded smart city project so far - In Belgium, Brussels, Ostend, Seraing as Fellow. - In France, Dijon, Lyon, Nantes, Nice in the Lighthouse project and Bordeaux as a Fellow city. - In the Netherlands, Alkmaar, Amsterdam, Eindhoven, Groningen, Rotterdam, Utrecht in the Lighthouse project. - From Hungary, Budapest, Miskolc, Újpest participated as a Fellow city. - In Romania, Alba Iulia, Botosani, Cluj-Napoca, Focșani, Suceava as a Fellow city.
+
+NL, BE, FR have many non-EU initiatives.
+
+It is notable that non of the EU Fellow projects could attract any private capital. According to the auditors, "some of the project solutions are still too immature to attract funding in the short term, which is a major obstacle to replicating them" [@european_court_of_auditors_smart_cities_2023, p22, p30]
+
+It is an open question if the application of digital twins beyond individual vechicles or buildings in an urban system is not yet commercially feasible, or the EU projects were not well managed. But it is worth noting that the digital twin technology receives plenty of market investment for about 5-6 years [@gartner_digital_twin_survey_2019]
+
+**The challenge for Reprex is to bring down the cost of open source software and hardware (OSSH) and add business innovation to make investment into smart city projects profitable for private investment.**
+
+Among the issues with deploying AI into digital twins the huge complexity of the problem is an obstacle.
+
+> Although the cooperation of DRL \[deep reinforcement learning - editor\]and DT has shown great potential in some scenarios, there are still problems that warrant investigation. The first problem is resource scheduling. The volume of data of physical objects in DT is huge, and the deployment of DRL at the edge also requires computing resource services. Therefore, reducing redundant data and designing lightweight DRL models are significant issues in the combination of DT and DRL. [@zhang_digital_twin_ai_2024, p38].
+
+In our understanding, the utopian digital twins are far too complex for practical AI applications. Reprex's mission is the simplification of the digital twin model to general a more lightweight digital twinning and the deployment of other, more transparent and controllable AI than DRL.
+
+## Further reading:
+
+-   *Digital Twins in Architecture, Engineering, Construction and Operations. A Brief Review and Analysis*: [@al-sehrawy_digital_2021]
+-   *Artificial Intelligence for Digital Twin* [@zhang_digital_twin_ai_2024]
+-   *On the Use of Information and Infrastructure Technologies for the Smart City Research in Europe: A Survey* [@santana_et_al_smart_city_survey_2018]
+-   *Special report 24/2023: Smart cities – Tangible solutions, but fragmentation challenges their wider adoption* [@european_court_of_auditors_smart_cities_2023]
+-   *Opinion of the European Committee of the regions — Smart cities: new challenges for a just transition toward climate neutrality — how to implement the SDGs in real life?* [@european_regions_smart_cities_2020]
+
+## References
